@@ -414,6 +414,8 @@ function onClose() {
     writeBlock("M3 S5000"); // Set RPM to minimum
     writeBlock("G4 P2000"); // Wait 2 seconds
     writeBlock(properties.routerOff); //turns router off
+    writeBlock("M5"); // stop spindle
+    writeBlock(properties.routerOff); //turns router off
   }
 
   if (properties.goHome){
